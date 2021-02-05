@@ -1,0 +1,58 @@
+Phrase.JS FILE PSEUDO CODE INSTRUCTIONS AND EXPLANATIONS
+
+Step 1.) create the phrase class. The phrase class should contain a constructor that received a phrase parameter. 
+    
+    class Phrase {
+        constructor(phrase) {
+
+        }
+    }
+
+step 2.) The class phrease is what the actual Phrase Object is representing. It should be set to the phrase parameter, but converted to all lower case.
+    use the this. method
+
+    this.phrase = phrase.toLowerCase();
+    }
+
+step 3.) The class Phrase should also contain these methods:
+
+         addPhraseToDisplay(): this adds letter placeholders to the display when the game starts. Each leter should represent an empty box as an li element.
+         Make sure the screen uses the letter CSS class for letters and space CSS class for spaces. 
+
+         checkletter(): should check to see if the letter selected by the player natches a letter in the phrase.
+
+         showMatchedLetter(): reveals the letter or letters on the board. To do this, select all of the letter DOM elements that have a CSS class nam that matches the selected 
+         letter and replace each element's hide CSS class with the SHOW CSS class.
+
+          
+GAME.JS FILE PSEUDO CODE INSTRUCTIONS AND EXPLANATIONS:
+
+Step 1.) create the game class. This class should include a constructor that initializes the following:
+
+Missed: - used to track the number of missed guesses by the plaer. Initial value is 0 since no guesses have been made to start.
+
+phraes: create an array of five Phrase objects to use with the game. The phrase should only include letters and spaces - NO Numbers or special characters.
+
+activePhrase: This is the Phrase object currently in play. The initial value is null. Using the startgame method - startgame()
+this property will be set to the Phrase object returned from a call to the getRandomPhrase() method.
+
+The class should have these methods:
+
+startGame() - hides the start screen overlay and calls the gerRandomPhrase() method - it also sets the activePhrase property with the phraseadds
+it also adds the phrase to the board by calling the addPhraseToDisplay() method. 
+
+getRandomPhrase() : Randomly retrieves one of the phrases stored in the phrases array and returns it.
+
+handleInteraction(): controls the game logic. Directs the game based on correct and incorrect guesses. Must include 
+    Disable the selected letter's onscreen keyboard button
+    if phrase does not includes guessed letter, add the wrong css class to the selected letter keyboard and call the removeLife() method
+    if phrase includes the guessed letter, call the showMatchedLetter() and call the checkForWin() method. 
+    If the player won the game, also call the gameOver() method.
+
+    removeLife() = this method sshoud remove a life from the scoreboard by replacing one of the liveheart.png images with a lostHeart.png
+    If the player missed 5 guesses they are out of lives and you call the gameOver()method
+
+    checkForWin () - checks to see if the player has revealed all of the letters in the active phrase
+
+    gameOver(): this method displays the original start screen overlay, updates h1 element with a friendly win or loss message
+    

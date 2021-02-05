@@ -4,15 +4,15 @@
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
-  --color-lose: #D94545;
-  --color-start: #5b85b7;
+  --color-win: #233fe0;
+  --color-lose: #e20d0d;
+  --color-start: #1a71db;
   --color-neutral: #445069;
   --color-neutral-light: #D2D2D2;
-  --color-keys: #37474F;
-  --color-keys-light: #E5E5E5;
-  --font-size-large: 60px;
-  --font-size-medium: 20px;
+  --color-keys: #110f0f;
+  --color-keys-light: #a19494;
+  --font-size-large: 75px;
+  --font-size-medium: 25px;
   --transition: all .2s ease-in-out;
 }
 
